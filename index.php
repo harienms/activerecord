@@ -184,7 +184,15 @@ echo "</table>";
     $record->isdone= "0";
     $insertID = $record->store_records();
 
-
+    echo "<table  border=\"3\">";
+    foreach($records as $key=>$row) {
+     echo "<tr>";
+     foreach($row as $key2=>$row2){
+        echo "<td>" . $row2 . "</td>";
+      }
+     echo "</tr>";
+    }
+    echo "</table>";
 
 
     echo "<h2>Update Records</h2>";
@@ -195,8 +203,17 @@ echo "</table>";
     $updateID = $record -> store_records();
 
 //echo '<h1>Updated Record</h1>';
+   echo "<table  border=\"3\">";
+   foreach($records as $key=>$row) {
+    echo "<tr>";
+    foreach($row as $key2=>$row2){
+        echo "<td>" . $row2 . "</td>";
+    }
+    echo "</tr>";
+    }
+   echo "</table>";
 
 
 
-    //$records = todos::findAll();
+//$records = todos::findAll();
 ?>
